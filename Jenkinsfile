@@ -1,13 +1,28 @@
 pipeline {
   agent any
- 
-  tools {nodejs “nodejs”}
- 
+    
+  tools {nodejs "nodejs"}
+    
   stages {
-    stage(‘Example’) {
+        
+    stage('Cloning Git') {
       steps {
-        sh ‘npm config ls’
+        git 'https://github.com/emersonrocha85/nodejs-example-build.git'
       }
     }
+        
+    stage('Install dependencies') {
+      steps {
+	    sh 'npm cache clean --force'
+        sh 'npm install'
+        sh 'npm run bowerInstall'
+      }
+    }
+     
+    stage('Test') {
+      steps {
+         sh 'npm test'
+      }
+    }      
   }
 }
