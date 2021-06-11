@@ -15,18 +15,18 @@ pipeline {
 		
 		echo 'npm install'
         
-		sh 'npm install'
+		sh 'npm install --verbose'
 		
 		echo 'npm install'
         
-		sh 'npm start'
+		sh 'npm start --verbose'
 		
       }
     }
      
     stage('Test') {
       steps {
-         sh 'npm test'
+         sh 'npm test --verbose'
       }
     }      
   }
