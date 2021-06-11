@@ -15,7 +15,7 @@
     "express",
     "Front-end"
   ],
-  "author": "Gustavo Apolinario <gustavo.guss@gmail.com>",
+  "author": "Emerson Rocha <emersonrocha85@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
