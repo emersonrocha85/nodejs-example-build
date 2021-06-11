@@ -10,7 +10,7 @@ pipeline {
       steps {
 	    sh 'npm cache clean --force'
         sh 'npm install'
-        echo 'npm run bowerInstall'
+        sh 'npm start'
       }
     }
      
