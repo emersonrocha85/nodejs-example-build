@@ -5,18 +5,23 @@ pipeline {
     
   stages {
         
-       
+    stage('Cloning Git') {
+      steps {
+        git 'https://github.com/emersonrocha85/nodejs-example-build.git'
+      }
+    }
+        
     stage('Install dependencies') {
       steps {
-	    echo 'npm cache clean --force'
-        echo 'npm install'
-        echo 'npm run bowerInstall'
+	    sh 'npm cache clean --force'
+        sh 'npm install'
+        sh 'npm run bowerInstall'
       }
     }
      
     stage('Test') {
       steps {
-         echo 'npm test'
+         sh 'npm test'
       }
     }      
   }
