@@ -19,7 +19,7 @@ pipeline {
 		
 		echo 'npm install'
         
-		sh 'npm start --verbose'
+		sh 'npm run --verbose'
 		
       }
     }
