@@ -1,34 +1,38 @@
 {
-  "name": "node-todo-frontend",
-  "version": "1.0.0",
-  "description": "A Front-end service with node.js and handlebars for microservice example",
-  "main": "server.js",
-  "scripts": {
-    "start": "node ./src/server.js",
-    "dev": "nodemon ./src/server.js",
-    "test": "mocha -R spec src/**/*.spec.js"
-  },
-  "keywords": [
-    "node.js",
-    "handlebars",
-    "microservices",
-    "express",
-    "Front-end"
-  ],
-  "author": "Emerson Rocha <emersonrocha85@gmail.com>",
-  "license": "ISC",
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "bootstrap": "^4.2.1",
-    "express": "^4.16.4",
-    "express-handlebars": "^3.0.0",
-    "font-awesome": "^4.7.0",
-    "handlebars-helpers": "^0.10.0",
-    "request": "^2.88.0"
+    "@testing-library/jest-dom": "^5.14.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
   },
-  "devDependencies": {
-    "mocha": "^5.2.0",
-    "nock": "^10.0.4",
-    "nodemon": "^1.18.9"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
