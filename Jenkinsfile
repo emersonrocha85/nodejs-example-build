@@ -4,20 +4,31 @@ pipeline {
   tools {nodejs "nodejs"}
     
   stages {
-        
 
-    stage('Install dependencies') {
+    stage('NPM Cache Clean') {
       steps {
 	  
 	    echo 'npm cache clean --force'
 	  
     	sh 'npm cache clean --force'
-		
+	
+      }
+    }        
+
+    stage('NPM Install') {
+      steps {
+	  
 		echo 'npm install'
         
 		sh 'npm install --verbose'
-		
-		echo 'npm install'
+
+      }
+    }
+
+    stage('Build') {
+      steps {
+
+		echo 'npm run build'
         
 		sh 'npm run build --verbose'
 		
