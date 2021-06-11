@@ -5,10 +5,18 @@ pipeline {
     
   stages {
         
-      
+       
+    stage('Install dependencies') {
+      steps {
+	    sh 'npm cache clean --force'
+        sh 'npm install'
+        sh 'npm run bowerInstall'
+      }
+    }
+     
     stage('Test') {
       steps {
-         sh 'npm -v'
+         sh 'npm test'
       }
     }      
   }
