@@ -39,6 +39,13 @@ pipeline {
       steps {
          echo 'npm test --verbose'
       }
+    }
+	 
+   stage('Deploy') {
+      steps {
+         echo 'Deploy'
+      }
     }      
+	  
   }
 }
