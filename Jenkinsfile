@@ -9,8 +9,7 @@ pipeline {
       steps {
 	  
 	    echo 'npm cache clean --force'
-	  
-    	sh 'npm cache clean --force'
+	   	sh 'npm cache clean --force'
 	
       }
     }        
@@ -19,8 +18,7 @@ pipeline {
       steps {
 	  
 		echo 'npm install'
-        
-		sh 'npm install --verbose'
+  	sh 'npm install --verbose'
 
       }
     }
@@ -29,7 +27,6 @@ pipeline {
       steps {
 
 		echo 'npm run build'
-        
 		sh 'npm run build --verbose'
 		
       }
