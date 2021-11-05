@@ -18,7 +18,7 @@ pipeline {
       steps {
 	  
 		echo 'npm install'
-  	sh 'npm install --verbose'
+  	    sh 'npm install --verbose'
 
       }
     }
@@ -27,7 +27,7 @@ pipeline {
       steps {
 
 		echo 'npm run build'
-		sh 'npm run build --verbose'
+		echo 'npm run build --verbose'
 		
       }
     }
