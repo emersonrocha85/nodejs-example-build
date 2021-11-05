@@ -27,7 +27,7 @@ pipeline {
       steps {
 
 		echo 'npm run build'
-		echo 'npm run build --verbose'
+		sh 'npm run build --verbose'
 		
       }
     }
